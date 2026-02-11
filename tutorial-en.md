@@ -41,11 +41,10 @@ The blocks can also be **animated**. To do this, the graphic must be **twice as 
 
 In the top center toolbar you can see 5 options: **Cube**, **Ramp**, **Select**, **Sprite** and **Place Start**
 
-- Cube\*\*: The graphic is placed in the room as a cube. All 6 sides are given the same texture.
+- **Cube**: The graphic is placed in the room as a cube. All 6 sides are given the same texture.  
+  ![image.png](tutorial/image%203.png)
 
-![image.png](tutorial/image%203.png)
-
-- **Cube**/**Slope**: The graphic is placed as a slope or Block in the room.
+- **Slope**: The graphic is placed as a slope in the room.
   Use R to rotate the slope.
   ![image.png](tutorial/image%204.png)
 
@@ -61,11 +60,10 @@ Once you have placed a sprite, the following dialogue opens in the Sprites secti
 
 Here you can specify what will happen if Doggo runs into the sprite. So far there are a bunch of options, but some important ones are: **message, teleport** and **sound/music.**
 
-- **message:** This is how you write dialogue, which appears in a small speech bubble above the sprite.
-  Each ‘message’ introduces a new speech bubble.
+- **message:** This is how you write dialogue, which appears in a small speech bubble above the sprite. Each ‘message’ introduces a new speech bubble.  
   ![image.png](tutorial/image%208.png)
 
-- **teleport**: This is how you can teleport Doggo. Click on ‘Place Teleport’ at the top of the Room category and place him. The command for the teleport is automatically copied to your clipboard and you can paste it into the sprite's actions.
+- **teleport**: This is how you can teleport Doggo. Click on ‘Place Teleport’ at the top of the Room category and place him. The command for the teleport is automatically copied to your clipboard and you can paste it into the sprite's actions.  
   ![image.png](tutorial/image%209.png)
   
 - **sound, music**: When Doggo runs into the sprite, the sound is played. More on this in the **Sound and Music** section.
@@ -83,7 +81,7 @@ Here you can specify what will happen if Doggo runs into the sprite. So far ther
 
 We differentiate between **Sound and Music**. Both can be triggered via actions in the Sprite Editor.
 
-- Sound**: Is played **only once\*\* per trigger. Several sounds can be played simultaneously.
+- **Sound**: Is played **only once\*\* per trigger. Several sounds can be played simultaneously.
 - **Music**: Music **loops** when triggered and continues to play between rooms. Only one music can play at a time.
 
 ### Room Editor
@@ -105,10 +103,6 @@ With **Shift + Q or E** you can move the block up and down.
 ![image.png](tutorial/image%2012.png)
 
 Press the play button at the top left to start your game. Use the arrow keys or hold down the mouse button to move Doggo through your world and interact with sprites.
-
-### Test
-
-Press the test button and place the cursor somewhere in the current room to start the game from the chosen position.
 
 ### Game Data
 
