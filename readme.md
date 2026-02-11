@@ -7,9 +7,9 @@ welcome to the wareware handbook!
 
 !! The tutorial and quick reference were written for the prerelease version of wareware, some info on it might be out of date. I'm working on updating everything (。・ω・。) !!
 
-[🌸 Beginner Tutorial](/tutorial-en)
+## [🌸 Beginner Tutorial](/tutorial-en)
 
-[📔 Quick Reference / Shortcuts](/reference)
+## [📔 Quick Reference / Shortcuts](/reference)
 
 
 ![wareware](https://github.com/user-attachments/assets/14e4e06f-9703-4bb4-9476-4445f89a5e12)
