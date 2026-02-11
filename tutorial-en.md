@@ -4,7 +4,7 @@
 
 Hi and thanks for testing riprip's ‘wareware’ engine!
 
-The engine is still in early alpha development, so it's not super stable. Save often if you are working on something important! A lot of things are not finished yet or a bit janky from the UI, don't be surprised 🫠 But we are still happy if you have feedback for us!
+The engine is still in early development. Save often if you are working on something important! A lot of things are not finished yet, don't be surprised 🫠 But we are still happy if you have feedback for us!
 
 ![image.png](tutorial/image.png)
 
@@ -37,7 +37,9 @@ The blocks can also be **animated**. To do this, the graphic must be **twice as 
 
 ![flame-sheet.png](tutorial/flame-sheet.png)
 
-Above the palette you can see 5 options: **Cube**, **Ramp**, **Select**, **Sprite** and **Place Start**
+(You can also make the graphic 3x or 4x or 5x etc. the width, then the animation will have 3, 4 or 5 frames respectively)
+
+In the top center toolbar you can see 5 options: **Cube**, **Ramp**, **Select**, **Sprite** and **Place Start**
 
 - Cube\*\*: The graphic is placed in the room as a cube. All 6 sides are given the same texture.
 
@@ -57,18 +59,16 @@ Once you have placed a sprite, the following dialogue opens in the Sprites secti
 
 ![image.png](tutorial/image%207.png)
 
-Here you can specify what will happen if Doggo runs into the sprite. So far there are 3 options: **message, teleport** and **sound/music.**
+Here you can specify what will happen if Doggo runs into the sprite. So far there are a bunch of options, but some important ones are: **message, teleport** and **sound/music.**
 
-- **message:** This is how you write dialogue, which appears in a small speech bubble above the sprite. It must always be formatted like this:
-  `message(‘Here is your text’)`
+- **message:** This is how you write dialogue, which appears in a small speech bubble above the sprite.
   Each ‘message’ introduces a new speech bubble.
-  **Note:** Be careful with inverted commas and brackets, because these characters currently end the dialogue. It is advisable to write/save the dialogue outside the engine so that nothing is lost.
-
-![image.png](tutorial/image%208.png)
+  ![image.png](tutorial/image%208.png)
 
 - **teleport**: This is how you can teleport Doggo. Click on ‘Place Teleport’ at the top of the Room category and place him. The command for the teleport is automatically copied to your clipboard and you can paste it into the sprite's actions.
   ![image.png](tutorial/image%209.png)
-- **sound, music**: Click on an added sound. The action is copied to your clipboard and can be pasted into the sprite's actions in the same way as with teleport. When Doggo runs into the sprite, the sound is played. More on this in the **Sound and Music** section.
+  
+- **sound, music**: When Doggo runs into the sprite, the sound is played. More on this in the **Sound and Music** section.
   ![image.png](tutorial/image%2010.png)
 
 **Select**: Select a sprite to reopen its Editor.
@@ -115,9 +115,8 @@ Press the test button and place the cursor somewhere in the current room to star
 ![image.png](tutorial/image%2013.png)
 
 - **New Game**: Opens a new game.
-- **Save**: Saves the current game as a cookie in the browser.
-- **Load**: Loads the last save status.
+- **Save**: Quick-saves the current game in the browser storage.
+- **Load**: Loads the last quick-save.
 - **Export Game**: Downloads all game files as a RIP file.
 - **Import Game**: Opens a RIP file.
-
-Unfortunately, it is not yet possible to export the game as an HTML file.
+- **Build Game**: Create a finished HTML export of your game that you can upload to itch.io!
