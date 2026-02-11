@@ -63,7 +63,7 @@ Here you can specify what will happen if Doggo runs into the sprite. So far ther
 - **message:** This is how you write dialogue, which appears in a small speech bubble above the sprite. Each ‘message’ introduces a new speech bubble.  
   ![image.png](tutorial/image%208.png)
 
-- **teleport**: This is how you can teleport Doggo. Click on ‘Place Teleport’ at the top of the Room category and place him. The command for the teleport is automatically copied to your clipboard and you can paste it into the sprite's actions.  
+- **teleport**: This is how you can teleport Doggo. Click on ‘Place Teleport’ at the top of the Room category and place them. The command for the teleport is automatically copied to your clipboard and you can paste it into the sprite's actions.  
   ![image.png](tutorial/image%209.png)
   
 - **sound, music**: When Doggo runs into the sprite, the sound is played. More on this in the **Sound and Music** section.
