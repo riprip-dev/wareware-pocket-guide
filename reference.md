@@ -40,7 +40,7 @@ Controls available while editing.
 | Input                | Action                             |
 | -------------------- | ---------------------------------- |
 | Left Mouse           | 🧱 Place block / Sprite            |
-| Right Mouse          | ❌ Delete block / 🐛 Select sprite |
+| Right Mouse          | ❌ Delete block                    |
 | Middle Mouse         | 🎥 Orbit camera                    |
 | Shift + Middle Mouse | 🎥 Pan camera                      |
 | Mouse Wheel          | 🎥 Zoom in/out                     |
@@ -64,14 +64,9 @@ Here's a list of all available actions in the scripting system.
 
 Displays a message bubble with text.
 
-```typescript
-message(text: string, tail?: boolean, pitch?: number, voice?: string)
-```
-
 | Parameter | Type    | Description                                                                                                          |
 | --------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
 | `text`    | string  | The message text to display                                                                                          |
-| `tail`    | boolean | (Optional) If true, shows a little message tail pointing to the sprite. Also affects the bubble sound. Default: true |
 | `pitch`   | number  | (Optional) Pitch of the voice. Default: 0.9                                                                          |
 | `voice`   | string  | (Optional) Voice sample. Can be "default", "piep" or "chomp". Default: "default"                                     |
 
@@ -93,16 +88,12 @@ You can add special effects to portions of text by wrapping them in {curly brace
 Example usage:
 
 ```typescript
-message("Watch out for the {shake}spooky {rainbow}ghost{/rainbow}{/shake}!")
+Watch out for the {shake}spooky {rainbow}ghost{/rainbow}{/shake}!
 ```
 
 ## 🚪 Teleport
 
 Teleports the player to a specified room and position.
-
-```typescript
-teleport(roomId: string, x: number, y: number, z: number)
-```
 
 | Parameter | Type   | Description            |
 | --------- | ------ | ---------------------- |
@@ -115,10 +106,6 @@ teleport(roomId: string, x: number, y: number, z: number)
 
 Plays a sound effect.
 
-```typescript
-sound(soundID: string, wait?: boolean)
-```
-
 | Parameter | Type    | Description                                       |
 | --------- | ------- | ------------------------------------------------- |
 | `soundID` | string  | Sound asset identifier                            |
@@ -127,10 +114,6 @@ sound(soundID: string, wait?: boolean)
 ## 🎵 Music
 
 Controls background music playback.
-
-```typescript
-music(musicID: string, loop?: boolean)
-```
 
 | Parameter | Type    | Description                                       |
 | --------- | ------- | ------------------------------------------------- |
@@ -141,10 +124,6 @@ music(musicID: string, loop?: boolean)
 
 Changes player character sprites.
 
-```typescript
-changeCharaSprite(idleSpriteGraphicID: string, walkingSpriteGraphicID: string)
-```
-
 | Parameter                | Type   | Description                    |
 | ------------------------ | ------ | ------------------------------ |
 | `idleSpriteGraphicID`    | string | Asset ID for idle animation    |
@@ -154,19 +133,11 @@ changeCharaSprite(idleSpriteGraphicID: string, walkingSpriteGraphicID: string)
 
 Removes the calling sprite.
 
-```typescript
-deleteSprite()
-```
-
 No parameters.
 
 ## 🎩 PutSpriteOnHead
 
 Places calling sprite on player's head.
-
-```typescript
-putSpriteOnHead()
-```
 
 No parameters.
 
@@ -174,29 +145,15 @@ No parameters.
 
 Removes all sprites from player's head.
 
-```typescript
-clearSpritesOnHead()
-```
-
 No parameters.
 
 ## 🔄 RestartGame
 
-Resets game to initial state.
-
-```typescript
-restartGame()
-```
-
-No parameters.
+Resets game to start.
 
 ## ⏲️ Wait
 
 Pauses script execution.
-
-```typescript
-wait(duration: number)
-```
 
 | Parameter  | Type   | Description          |
 | ---------- | ------ | -------------------- |
@@ -206,10 +163,6 @@ wait(duration: number)
 
 Displays an image with fade transitions.
 
-```typescript
-image(imageGraphicID: string, fadeInTime: number, fadeOutTime: number)
-```
-
 | Parameter        | Type   | Description                  |
 | ---------------- | ------ | ---------------------------- |
 | `imageGraphicID` | string | Image asset identifier       |
@@ -218,11 +171,7 @@ image(imageGraphicID: string, fadeInTime: number, fadeOutTime: number)
 
 ## ✂️ Cut
 
-Cuts directly to another room without changing the players position.
-
-```typescript
-cut(roomId: string)
-```
+Cuts directly to another room without changing the players position. Helpful when you want to quickly swap the room to a slightly changed version (i.e. swapping sprites).
 
 | Parameter | Type   | Description            |
 | --------- | ------ | ---------------------- |
