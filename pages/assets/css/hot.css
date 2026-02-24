@@ -1,0 +1,378 @@
+:root {
+	--primary: #ffffff;
+	--secondary: #eae5f3;
+	--tertiary: #ceb3d1;
+
+	--misty: #7277ff;
+
+	--bg-rose: #f9a7fc;
+	--bg-lavender: #bdb6ff;
+	--bg-aqua: #a2dac3;
+}
+
+::selection {
+	background: var(--misty);
+	color: var(--primary);
+}
+
+html {
+	height: 100%;
+	width: 100%;
+
+	color: #000;
+	font-family: "Nunito", sans-serif;
+	font-size: 12pt;
+	font-weight: 500;
+
+	image-rendering: pixelated;
+
+	cursor:
+		url(../graphics/icons/cursor1.png) 1 0,
+		auto;
+
+	background-color: var(--primary);
+	background: repeating-conic-gradient(var(--primary) 0 25%, #e4e1ff 0 50%) 50% / 16px 16px;
+	background-size: 16px 16px;
+	background-position: 0 0;
+
+	animation: checkerScroll 16s linear infinite;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0 0;
+	overflow: hidden;
+}
+
+a {
+	color: var(--misty);
+	text-decoration-style: dotted;
+	text-underline-offset: 2px;
+	text-decoration-thickness: 2px;
+	cursor:
+		url(../graphics/icons/cursor2.png) 5 0,
+		auto;
+}
+
+a:hover {
+	text-decoration-style: solid;
+}
+
+.page img {
+	border: 1px solid var(--misty);
+	border-radius: 6px;
+}
+
+@keyframes checkerScroll {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 32px 32px;
+	}
+}
+
+.book {
+	display: flex;
+	flex-flow: column nowrap;
+
+	position: relative;
+	top: 50%;
+	transform: translateY(-53%);
+
+	margin: auto;
+
+	width: 46em;
+	max-width: 90%;
+	max-height: 90%;
+
+	border: 1px solid #000;
+
+	box-shadow: 8px 8px 0 var(--bg-lavender);
+	overflow: hidden;
+
+	background-color: var(--primary);
+
+	scale: 1;
+	transition: scale 0.3s;
+
+	z-index: 1;
+}
+
+.header {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 1em;
+
+	padding: 0.25em 0.25em;
+
+	font-size: 1.2em;
+
+	color: var(--primary);
+	background: var(--misty);
+}
+
+.header .title {
+	display: inline-block;
+	flex-grow: 1;
+	font-weight: bold;
+	margin-left: 0.5em;
+}
+
+.header div {
+	display: flex;
+	vertical-align: middle;
+	align-self: center;
+}
+
+.header a {
+	display: inline-block;
+
+	padding: 0 0.5em;
+	height: 1.5em;
+
+	text-align: center;
+
+	color: #ffffff;
+
+	outline: 1px solid var(--bg-lavender);
+	border: 1px solid #000;
+	border-radius: 6px;
+}
+
+.close a {
+	width: 1.5em;
+	padding: 0 0;
+
+	background-color: #d75f6b;
+
+	outline: 1px solid var(--bg-rose);
+	border: 1px solid #000;
+	border-radius: 6px;
+}
+
+.main {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-start;
+}
+
+@media (max-width: 820px) {
+	.book {
+		top: 0;
+		margin: 0 0;
+		max-width: 100%;
+		transform: translateY(0);
+	}
+	.main {
+		flex-flow: column nowrap;
+		max-height: 100%;
+	}
+}
+
+.sidebar {
+	border: 2px dotted var(--misty);
+	border-radius: 6px;
+
+	margin: 1em;
+	padding: 1em;
+	min-width: 12em;
+	max-width: 12em;
+
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+.page {
+	padding: 1em;
+	padding-top: 0;
+	min-height: 50em;
+
+	overflow-y: scroll;
+
+	max-height: 50em;
+}
+
+.desktop {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 2em;
+}
+
+.icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	background-size: contain;
+	translate: 0px -1px;
+}
+
+.file {
+	font-weight: bold;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+
+	width: 4em;
+	padding: 0.5em;
+
+	border-radius: 3px;
+	user-select: none;
+
+	/* box-shadow: 8px 8px 0 var(--bg-lavender); */
+}
+
+.file:hover {
+	color: var(--misty);
+}
+.file:hover .icon {
+	filter: sepia(50%) saturate(2000%) brightness(95%) contrast(40%) hue-rotate(180deg);
+}
+
+.file .name {
+	hyphens: auto;
+	text-align: center;
+	margin-top: 0.25em;
+	line-height: 0.75em;
+}
+
+.file .icon {
+	width: 32px;
+	height: 32px;
+	background-size: contain;
+}
+
+.icon.handbook {
+	background-image: url(../graphics/icons/handbook.png);
+}
+.icon.pencil {
+	background-image: url(../graphics/icons/pencil.png);
+	background-size: 32px 16px;
+}
+.icon.delete {
+	background-image: url(../graphics/icons/close.png);
+	background-size: 32px 16px;
+}
+.icon.mistybook {
+	background-image: url(../graphics/misty-icon-book.png);
+}
+
+code {
+	border-left: none !important;
+	box-shadow: none !important;
+
+	border: 1px solid var(--bg-lavender) !important;
+	border-radius: 6px;
+	padding: 0.1em;
+
+	background-color: #edebff;
+}
+
+pre[class*="language-"] > code {
+	background-image: linear-gradient(#edebff 50%, #f8f6ff 50%) !important;
+}
+
+pre[class*="language-"]::after,
+pre[class*="language-"]::before {
+	display: none !important;
+}
+
+ul.tree-view {
+	display: block;
+	padding: 0em;
+	margin: 0;
+}
+
+ul.tree-view li {
+	list-style-type: none;
+}
+
+ul.tree-view a {
+	text-decoration-line: none;
+}
+
+ul.tree-view a:hover,
+ul.tree-view a:active {
+	text-decoration-line: underline;
+}
+
+ul.tree-view a:focus,
+ul.tree-view .is-active {
+	color: var(--bg-rose);
+	text-decoration-line: underline;
+	text-decoration-style: solid;
+}
+
+ul.tree-view ul {
+	margin-left: 16px;
+	margin-left: 16px;
+	padding-left: 17px;
+	/* Goes down too far */
+	border-left: 2px dotted var(--bg-lavender);
+}
+
+ul.tree-view ul > li {
+	position: relative;
+}
+ul.tree-view ul > li::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: -16px;
+	top: 6px;
+	width: 12px;
+	border-bottom: 2px dotted var(--bg-lavender);
+}
+
+/* Cover the bottom of the left dotted border */
+ul.tree-view ul > li:last-child::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: -20px;
+	top: 8px;
+	bottom: 0px;
+	width: 8px;
+	background: #fff;
+}
+
+ul.tree-view details {
+	margin-top: 0;
+}
+
+ul.tree-view details[open] summary {
+	margin-bottom: 0;
+}
+
+ul.tree-view ul details > summary:before {
+	margin-left: -22px;
+	position: relative;
+	z-index: 1;
+}
+
+ul.tree-view details > summary:before {
+	text-align: center;
+	display: block;
+	float: left;
+	content: "+";
+	border: 2px solid var(--bg-lavender);
+	width: 8px;
+	height: 9px;
+	margin-top: 2px;
+	line-height: 8px;
+	margin-right: 5px;
+	padding-left: 1px;
+	background-color: #fff;
+}
+
+ul.tree-view details[open] > summary:before {
+	content: "-";
+}
+
+ul.tree-view details > summary::marker,
+ul.tree-view details > summary::-webkit-details-marker {
+	content: "";
+}

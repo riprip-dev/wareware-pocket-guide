@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Basic Page Needs -->
+	<meta charset="utf-8">
+	<title>{{ title or metadata.title }}</title>
+	<meta name="description" content="{{ description or metadata.description }}">
+	<meta name="author" content="{{ author }}">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- FONT  -->
+	<meta http-equiv="cleartype" content="on" />
+	
+	<!-- CSS  -->
+	<link rel="stylesheet" type="text/css" href="{{ '/assets/css/hot.css' | url }}">
+	<link rel="stylesheet" type="text/css" href="{{ '/assets/fonts/fonts.css' | url }}">
+	<!-- Syntax Highlight -->
+	<link rel="stylesheet" type="text/css" href="{{ '/assets/css/prism.css' | url }}">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/png" href="{{ '/assets/graphics/misty-icon-book.png' | url }}" />
+
+	<!-- JS -->
+	<script src="{{ '/assets/main.js' | url }}"></script>
+
+</head>
+
+<body>
+	
+	<div id="guide" class="book">
+		<div class="header">
+			<div class="title"><span class="icon mistybook"></span> wareware pocket guide</div>
+			<div class="search"></div>
+			<div class="paletteswitch"></div>
+			<div class="editpage"><a href="linkhere"><span class="icon pencil"></span> edit page</a></div>
+			<div class="close"><a onclick="closeWindow('guide')"><span class="icon delete"></span></a></div>
+		</div>
+		<div class="main">
+			<div class="sidebar">
+				{% include 'components/nav.njk' %}
+			</div>
+			<div class="page">
+				{{ content | safe }}
+			</div>
+		</div>
+	</div>
+
+	<div class="desktop">
+		<a class="file" onclick="openWindow('guide')">
+			<div class="icon handbook"></div>
+			<div class="name">pocketguide.nfo</div>
+		</a>
+	</div>
+
+</body>
+
+</html>
