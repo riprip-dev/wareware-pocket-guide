@@ -1,0 +1,41 @@
+# Github Actions workflow
+# Sets up a node environment, builds the editor and deploys it via FTP to https://spook.tools/dev/
+
+name: 🚀 Deploy website via ftp
+
+on:
+  # we might want to change this to 'on: release' later on
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: 📦 Use Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: 👻 Install dependencies
+        run: npm install
+
+      - name: 🫀 Build website with 11ty
+        run: npx @11ty/eleventy
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: www602.your-server.de
+          port: 21
+          protocol: ftps
+          username: riprip_3
+          password: ${{ secrets.ftp_password_wareware }}
+          #   timeout: 60000  # 1 minute
+          local-dir: ./_site/
+          server-dir: ./guide/
