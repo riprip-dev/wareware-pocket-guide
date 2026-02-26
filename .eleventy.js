@@ -9,6 +9,9 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addFilter("startsWith", require("./pages/_11ty/filters/startsWith"));
 
+	eleventyConfig.addShortcode("key", (arg) => `<span class="key">${arg}</span>`);
+	eleventyConfig.addShortcode("icon", (arg) => `<span class="icon ${arg}"></span>`);
+
 	const slugify = require("slugify");
 	eleventyConfig.addFilter("slug", (input) => {
 		const options = {

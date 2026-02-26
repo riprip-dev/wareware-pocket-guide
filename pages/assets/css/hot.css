@@ -192,6 +192,8 @@ a:hover {
 	overflow-y: scroll;
 
 	max-height: 50em;
+
+	width: 100%;
 }
 
 .desktop {
@@ -259,7 +261,47 @@ a:hover {
 .icon.mistybook {
 	background-image: url(../graphics/misty-icon-book.png);
 }
+.icon.doggo {
+	background-image: url(../graphics/icons/doggo_idle.png);
+	background-size: 32px 16px;
+}
 
+.key {
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+	background-color: #edebff;
+	border: 1px solid var(--bg-lavender);
+	border-radius: 6px;
+	border-bottom-width: 3px;
+	padding: 0 0.2em;
+	min-width: 1em;
+}
+
+.key:hover {
+	translate: 0 3px;
+	border-bottom-width: 1px;
+	margin-bottom: 2px;
+}
+
+table {
+	border: 1px solid var(--bg-lavender);
+	border-collapse: collapse;
+
+	border-radius: 6px;
+	padding: 0.1em;
+
+	table-layout: auto;
+	width: 100%;
+
+	background-color: #f8f6ff;
+}
+
+th,
+td {
+	padding: 0.25em;
+	border: 1px dotted var(--misty);
+}
 code {
 	border-left: none !important;
 	box-shadow: none !important;
