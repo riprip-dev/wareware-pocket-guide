@@ -4,16 +4,17 @@ title: "About this Guide"
 
 # Welcome to the wareware pocket guide!
 
-This little booklet is still wip🩷
+This little booklet is still wip🩷  
+Check back occasionally for more updates.
 
 <img width="69" height="64" alt="image" src="https://github.com/user-attachments/assets/dbc766be-86cb-4032-901a-925e96c54dbf" />
 <img width="271" height="52" alt="image" src="https://github.com/user-attachments/assets/b5cc12b5-232b-4a97-8b5d-4cf7ecf42cba" /> <img width="69" height="64" alt="image" src="https://github.com/user-attachments/assets/676b37ff-04e9-45a2-922e-ba9d895251ae" />
 
-Start by checking out:
+Get started by reading:
 
-## [🌸 Beginner Tutorial](tutorial) (!outdated!)
+## [🌸 Beginner Tutorial](tutorial)
 
-## [📔 Quick Reference / Shortcuts](shortcuts)
+## [📔 Shortcut reference](shortcuts)
 
 ---
 

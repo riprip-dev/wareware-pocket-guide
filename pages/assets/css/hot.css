@@ -60,8 +60,9 @@ a:hover {
 }
 
 .page img {
-	border: 1px solid var(--misty);
 	border-radius: 6px;
+	max-width: 100%;
+	image-rendering: auto;
 }
 
 @keyframes checkerScroll {
@@ -87,7 +88,7 @@ a:hover {
 	max-width: 90%;
 	max-height: 90%;
 
-	border: 1px solid #000;
+	border: 1px solid var(--bg-lavender);
 
 	box-shadow: 8px 8px 0 var(--bg-lavender);
 	overflow: hidden;
@@ -177,10 +178,8 @@ a:hover {
 
 	margin: 1em;
 	padding: 1em;
-	min-width: 12em;
-	max-width: 12em;
+	width: 13em;
 
-	font-size: 0.8em;
 	font-weight: bold;
 }
 
@@ -330,6 +329,7 @@ ul.tree-view {
 
 ul.tree-view li {
 	list-style-type: none;
+	margin-bottom: 0.25em;
 }
 
 ul.tree-view a {
@@ -417,4 +417,83 @@ ul.tree-view details[open] > summary:before {
 ul.tree-view details > summary::marker,
 ul.tree-view details > summary::-webkit-details-marker {
 	content: "";
+}
+
+:root {
+	--color-note: #0969da;
+	--color-tip: #1a7f37;
+	--color-warning: #9a6700;
+	--color-severe: #bc4c00;
+	--color-caution: #d1242f;
+	--color-important: #8250df;
+}
+
+.markdown-alert {
+	padding: 0.5rem 1rem;
+	margin-bottom: 16px;
+	color: inherit;
+	border-left: 0.25em solid #888;
+}
+
+.markdown-alert > :first-child {
+	margin-top: 0;
+}
+
+.markdown-alert > :last-child {
+	margin-bottom: 0;
+}
+
+.markdown-alert .markdown-alert-title {
+	display: flex;
+	font-weight: 500;
+	align-items: center;
+	line-height: 1;
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+	margin-right: 0.5rem;
+	display: inline-block;
+	overflow: visible !important;
+	vertical-align: text-bottom;
+	fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+	border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+	color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+	border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+	color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+	border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+	color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+	border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+	color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+	border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+	color: var(--color-caution);
 }

@@ -1,11 +1,21 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const markdownIt = require("markdown-it");
+const markdownItGHA = require("markdown-it-github-alerts").default;
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(syntaxHighlight);
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+	const options = {
+		html: true,
+	};
+
+	const markdownLib = markdownIt(options).use(markdownItGHA);
+	eleventyConfig.setLibrary("md", markdownLib);
+
 	eleventyConfig.addPassthroughCopy("pages/assets/");
+	eleventyConfig.addPassthroughCopy("pages/tutorial/");
 
 	eleventyConfig.addFilter("startsWith", require("./pages/_11ty/filters/startsWith"));
 
