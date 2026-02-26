@@ -88,7 +88,7 @@ a:hover {
 	max-width: 90%;
 	max-height: 90%;
 
-	border: 1px solid var(--bg-lavender);
+	outline: 1px solid black;
 
 	box-shadow: 8px 8px 0 var(--bg-lavender);
 	overflow: hidden;
