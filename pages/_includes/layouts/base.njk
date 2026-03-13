@@ -31,12 +31,12 @@
 
 <body>
 	
-	<div id="guide" class="book">
+	<div id="guide" class="window">
 		<div class="header">
 			<div class="title"><span class="icon mistybook"></span> wareware pocket guide</div>
 			<div class="search"></div>
 			<div class="paletteswitch"></div>
-			<div class="editpage"><a href="https://github.com/riprip-dev/wareware-pocket-guide/edit/main/pages{{ page.filePathStem }}.md"><span class="icon pencil"></span> edit page</a></div>
+			<div class="editpage"><a href="https://github.com/riprip-dev/wareware-pocket-guide/edit/main/pages{{ page.filePathStem }}.md"><span class="icon pencil"></span><span> edit page</span></a></div>
 			<div class="close"><a onclick="closeWindow('guide')"><span class="icon delete"></span></a></div>
 		</div>
 		<div class="main">
@@ -44,7 +44,7 @@
 				{% include 'components/nav.njk' %}
 			</div>
 			<div class="page">
-				{{ content | safe }}
+				<div class="content">{{ content | safe }}</div>
 			</div>
 		</div>
 	</div>
